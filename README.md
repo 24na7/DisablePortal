@@ -2,6 +2,6 @@
 
 **Forge 1.20.1**
 
-**Modrinth - https://modrinth.com/project/disableportal** *SOON*
+**Modrinth - https://modrinth.com/project/disableportal**
 
 **CurseForge - https://www.curseforge.com/minecraft/mc-mods/disableportal**
