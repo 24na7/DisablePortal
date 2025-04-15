@@ -4,7 +4,7 @@ license="${mod_license}"
 
 [[mods]]
 modId="disableportal"
-version="1.1"
+version="1.2"
 displayName="DisablePortal"
 authors="24na7"
 description="This mod disables the ability to activate Nether or End portals. You can enable or disable this blocking feature and activate the portal."

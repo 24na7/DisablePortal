@@ -20,10 +20,15 @@ import org.okunev.disableportal.Command.PortalCommand;
 public class ModEventSubscriber {
 
     private static final int PORTAL_FRAME_RADIUS = 1;
+    public static boolean isNetherPortalEnabled = true;
+    public static boolean isEndPortalEnabled = true;
 
     @SubscribeEvent(priority = EventPriority.NORMAL)
     public static void onPlayerUsePortal(PlayerInteractEvent event) {
-        if (!PortalCommand.isPortalBlockEnabled()) {
+        if (event.getLevel().dimension() == Level.NETHER && !isNetherPortalEnabled) {
+            return;
+        }
+        if (event.getLevel().dimension() == Level.END && !isEndPortalEnabled) {
             return;
         }
     }
@@ -31,7 +36,9 @@ public class ModEventSubscriber {
     // Blocking activate portal
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onPortalSpawn(BlockEvent.PortalSpawnEvent event) {
-        if (!PortalCommand.isPortalBlockEnabled()) return;
+        if (!PortalCommand.isNetherPortalEnabled()) return;
+        event.setCanceled(true);
+        if (!PortalCommand.isEndPortalEnabled()) return;
         event.setCanceled(true);
     }
 
@@ -49,7 +56,8 @@ public class ModEventSubscriber {
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onEndPortalActivate(PlayerInteractEvent.RightClickBlock event) {
-        if (!PortalCommand.isPortalBlockEnabled()) return;
+        // blocking end portal command
+        if (!PortalCommand.isEndPortalEnabled()) return;
 
         Level level = event.getLevel();
         BlockPos pos = event.getPos();
@@ -67,5 +75,13 @@ public class ModEventSubscriber {
         MinecraftForge.EVENT_BUS.addListener(ModEventSubscriber::onPlayerUsePortal);
         MinecraftForge.EVENT_BUS.addListener(ModEventSubscriber::onPortalSpawn);
         MinecraftForge.EVENT_BUS.addListener(ModEventSubscriber::onEndPortalActivate);
+    }
+
+    public static boolean isNetherPortalEnabled() {
+        return isNetherPortalEnabled;
+    }
+
+    public static boolean isEndPortalEnabled() {
+        return isEndPortalEnabled;
     }
 }
