@@ -1,0 +1,17 @@
+name: Disableportal
+version: '1.2.1'
+main: org.okunev.disableportal.Disableportal
+api-version: '1.21'
+author: 24na7
+description: This plugin disables the ability to activate Nether or End portals. You can enable or disable this blocking feature and activate the portal.
+commands:
+  disableportal:
+    description: Portal management
+    usage: /disableportal <nether/end> <true/false>
+    permission: disableportal.admin
+    aliases: [dp, portals, portal]
+
+permissions:
+  disableportal.admin:
+    description: Permission to use plugin commands
+    default: op

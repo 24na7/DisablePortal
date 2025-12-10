@@ -1,38 +1,44 @@
 package org.okunev.disableportal;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLLoader;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.okunev.disableportal.commands.PortalCommand;
+import org.okunev.disableportal.listeners.PortalListener;
+import org.okunev.disableportal.manager.PortalManager;
 
-import java.util.AbstractMap;
-import java.util.Collection;
-import java.util.concurrent.ConcurrentLinkedQueue;
+public class Disableportal extends JavaPlugin {
 
-@Mod(Disableportal.MODID)
-@Mod.EventBusSubscriber(modid = Disableportal.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class Disableportal {
+    private static Disableportal instance;
+    private PortalManager portalManager;
 
-    public static final Logger LOGGER = LogManager.getLogger(Disableportal.class);
-    public static final String MODID = "disableportal";
-    private static final String PROTOCOL_VERSION = "1";
-    private static int messageID = 0;
-    private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue();
+    @Override
+    public void onEnable() {
+        instance = this;
 
-    public Disableportal() {
-        if (FMLLoader.getDist() == Dist.DEDICATED_SERVER) {
-            FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
-            MinecraftForge.EVENT_BUS.register(this);
-        }
+        saveDefaultConfig();
+        portalManager = new PortalManager(this);
+        getCommand("disableportal").setExecutor(new PortalCommand(this));
+
+        Bukkit.getPluginManager().registerEvents(new PortalListener(this), this);
+        Bukkit.getScheduler().runTaskTimer(this, this::checkExistingPortals, 0L, 20L);
+
+        getLogger().info("disableportal enabled!");
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        if (FMLLoader.getDist() == Dist.DEDICATED_SERVER) {
-            // logic server
-        }
+    @Override
+    public void onDisable() {
+        saveConfig();
+        getLogger().info("disableportal disabled!");
+    }
+
+    private void checkExistingPortals() {
+    }
+
+    public static Disableportal getInstance() {
+        return instance;
+    }
+
+    public PortalManager getPortalManager() {
+        return portalManager;
     }
 }
