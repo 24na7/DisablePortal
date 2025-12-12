@@ -4,18 +4,21 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.okunev.disableportal.commands.PortalCommand;
 import org.okunev.disableportal.listeners.PortalListener;
+import org.okunev.disableportal.manager.LocaleManager;
 import org.okunev.disableportal.manager.PortalManager;
 
 public class Disableportal extends JavaPlugin {
 
     private static Disableportal instance;
     private PortalManager portalManager;
+    private LocaleManager localeManager;
 
     @Override
     public void onEnable() {
         instance = this;
 
         saveDefaultConfig();
+        localeManager = new LocaleManager(this);
         portalManager = new PortalManager(this);
         getCommand("disableportal").setExecutor(new PortalCommand(this));
 
@@ -40,5 +43,9 @@ public class Disableportal extends JavaPlugin {
 
     public PortalManager getPortalManager() {
         return portalManager;
+    }
+
+    public LocaleManager getLocaleManager() {
+        return localeManager;
     }
 }

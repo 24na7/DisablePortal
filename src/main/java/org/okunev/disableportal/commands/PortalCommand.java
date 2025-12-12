@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.okunev.disableportal.Disableportal;
@@ -38,14 +39,30 @@ public class PortalCommand implements CommandExecutor, TabCompleter {
 
         if (args[0].equalsIgnoreCase("status")) {
             sendMessage(sender, "messages.status-title");
-            sender.sendMessage(getMessage("messages.nether-portals") +
+            sender.sendMessage(getMessage(sender, "messages.nether-portals") +
                     (manager.isNetherPortalEnabled() ?
-                            getMessage("messages.enabled") :
-                            getMessage("messages.disabled")));
-            sender.sendMessage(getMessage("messages.end-portals") +
+                            getMessage(sender, "messages.enabled") :
+                            getMessage(sender, "messages.disabled")));
+            sender.sendMessage(getMessage(sender, "messages.end-portals") +
                     (manager.isEndPortalEnabled() ?
-                            getMessage("messages.enabled") :
-                            getMessage("messages.disabled")));
+                            getMessage(sender, "messages.enabled") :
+                            getMessage(sender, "messages.disabled")));
+            return true;
+        }
+
+        if (args[0].equalsIgnoreCase("locale")) {
+            if (args.length < 2) {
+                sendMessage(sender, "messages.locale-usage");
+                return true;
+            }
+
+            String locale = args[1].toLowerCase();
+            if (locale.equals("en_us") || locale.equals("ru_ru")) {
+                plugin.getLocaleManager().setDefaultLocale(locale);
+                sendMessage(sender, "messages.locale-changed");
+            } else {
+                sendMessage(sender, "messages.locale-invalid");
+            }
             return true;
         }
 
@@ -78,15 +95,24 @@ public class PortalCommand implements CommandExecutor, TabCompleter {
     }
 
     private void sendMessage(CommandSender sender, String path) {
-        String message = plugin.getConfig().getString(path, "");
+        String message;
+        if (sender instanceof Player) {
+            message = plugin.getLocaleManager().getMessage((Player) sender, path);
+        } else {
+            message = plugin.getLocaleManager().getMessage(path);
+        }
+
         if (!message.isEmpty()) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+            sender.sendMessage(message);
         }
     }
 
-    private String getMessage(String path) {
-        String message = plugin.getConfig().getString(path, "");
-        return ChatColor.translateAlternateColorCodes('&', message);
+    private String getMessage(CommandSender sender, String path) {
+        if (sender instanceof Player) {
+            return plugin.getLocaleManager().getMessage((Player) sender, path);
+        } else {
+            return plugin.getLocaleManager().getMessage(path);
+        }
     }
 
     @Nullable
@@ -95,7 +121,7 @@ public class PortalCommand implements CommandExecutor, TabCompleter {
         List<String> completions = new ArrayList<>();
 
         if (args.length == 1) {
-            List<String> options = Arrays.asList("nether", "end", "status");
+            List<String> options = Arrays.asList("nether", "end", "status", "locale");
             for (String option : options) {
                 if (option.startsWith(args[0].toLowerCase())) {
                     completions.add(option);
@@ -104,6 +130,13 @@ public class PortalCommand implements CommandExecutor, TabCompleter {
         } else if (args.length == 2) {
             if (args[0].equalsIgnoreCase("nether") || args[0].equalsIgnoreCase("end")) {
                 List<String> options = Arrays.asList("true", "false", "on", "off");
+                for (String option : options) {
+                    if (option.startsWith(args[1].toLowerCase())) {
+                        completions.add(option);
+                    }
+                }
+            } else if (args[0].equalsIgnoreCase("locale")) {
+                List<String> options = Arrays.asList("en_us", "ru_ru");
                 for (String option : options) {
                     if (option.startsWith(args[1].toLowerCase())) {
                         completions.add(option);

@@ -1,6 +1,5 @@
 package org.okunev.disableportal.listeners;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.type.EndPortalFrame;
@@ -44,7 +43,8 @@ public class PortalListener implements Listener {
 
                 for (Player player : event.getWorld().getPlayers()) {
                     if (player.getLocation().distance(event.getBlocks().get(0).getLocation()) < 20) {
-                        player.sendMessage(getMessage("messages.nether-create-disabled"));
+                        String message = plugin.getLocaleManager().getMessage(player, "messages.nether-create-disabled");
+                        player.sendMessage(message);
                         break;
                     }
                 }
@@ -68,7 +68,8 @@ public class PortalListener implements Listener {
                 if (isNetherPortalFrame(block)) {
                     if (!plugin.getPortalManager().isNetherPortalEnabled()) {
                         event.setCancelled(true);
-                        player.sendMessage(getMessage("messages.nether-create-disabled"));
+                        String message = plugin.getLocaleManager().getMessage(player, "messages.nether-create-disabled");
+                        player.sendMessage(message);
                     }
                 }
             }
@@ -94,7 +95,8 @@ public class PortalListener implements Listener {
 
                 if (!plugin.getPortalManager().isEndPortalEnabled()) {
                     event.setCancelled(true);
-                    player.sendMessage(getMessage("messages.end-activate-disabled"));
+                    String message = plugin.getLocaleManager().getMessage(player, "messages.end-activate-disabled");
+                    player.sendMessage(message);
                 }
             }
         }
@@ -107,12 +109,14 @@ public class PortalListener implements Listener {
         if (event.getCause() == PlayerPortalEvent.TeleportCause.NETHER_PORTAL) {
             if (!plugin.getPortalManager().isNetherPortalEnabled()) {
                 event.setCancelled(true);
-                player.sendMessage(getMessage("messages.nether-use-disabled"));
+                String message = plugin.getLocaleManager().getMessage(player, "messages.nether-use-disabled");
+                player.sendMessage(message);
             }
         } else if (event.getCause() == PlayerPortalEvent.TeleportCause.END_PORTAL) {
             if (!plugin.getPortalManager().isEndPortalEnabled()) {
                 event.setCancelled(true);
-                player.sendMessage(getMessage("messages.end-use-disabled"));
+                String message = plugin.getLocaleManager().getMessage(player, "messages.end-use-disabled");
+                player.sendMessage(message);
             }
         }
     }
@@ -143,20 +147,17 @@ public class PortalListener implements Listener {
             if (block.getType() == Material.NETHER_PORTAL) {
                 if (!plugin.getPortalManager().isNetherPortalEnabled()) {
                     event.setCancelled(true);
-                    player.sendMessage(getMessage("messages.nether-use-disabled"));
+                    String message = plugin.getLocaleManager().getMessage(player, "messages.nether-use-disabled");
+                    player.sendMessage(message);
                 }
             } else if (block.getType() == Material.END_PORTAL || block.getType() == Material.END_GATEWAY) {
                 if (!plugin.getPortalManager().isEndPortalEnabled()) {
                     event.setCancelled(true);
-                    player.sendMessage(getMessage("messages.end-use-disabled"));
+                    String message = plugin.getLocaleManager().getMessage(player, "messages.end-use-disabled");
+                    player.sendMessage(message);
                 }
             }
         }
-    }
-
-    private String getMessage(String path) {
-        String message = plugin.getConfig().getString(path, "");
-        return ChatColor.translateAlternateColorCodes('&', message);
     }
 
     private boolean isNetherPortalFrame(Block obsidianBlock) {

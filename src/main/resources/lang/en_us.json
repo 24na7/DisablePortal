@@ -1,0 +1,22 @@
+{
+  "messages.no-permission": "&cYou don't have permission to do that!",
+  "messages.invalid-value": "&cInvalid value! Use true or false",
+  "messages.unknown-portal": "&cUnknown portal type! Use nether or end",
+  "messages.usage": "&a/disableportal nether <true/false> &7- Enable/disable Nether portals\n&a/disableportal end <true/false> &7- Enable/disable End portals\n&a/disableportal status &7- Current status\n&a/disableportal locale <en_us/ru_ru> &7- Change language",
+  "messages.status-title": "&6=== Current Settings ===",
+  "messages.nether-portals": "&eNether portals: ",
+  "messages.end-portals": "&eEnd portals: ",
+  "messages.enabled": "&aEnabled",
+  "messages.disabled": "&cDisabled",
+  "messages.nether-enabled": "&aNether portals are now available",
+  "messages.nether-disabled": "&aNether portals are now blocked",
+  "messages.end-enabled": "&aEnd portals are now available",
+  "messages.end-disabled": "&aEnd portals are now blocked",
+  "messages.nether-create-disabled": "&cCreating Nether portals is disabled!",
+  "messages.nether-use-disabled": "&cNether portals are disabled!",
+  "messages.end-activate-disabled": "&cActivating End portals is disabled!",
+  "messages.end-use-disabled": "&cEnd portals are disabled!",
+  "messages.locale-usage": "&cUsage: /disableportal locale <en_us/ru_ru>",
+  "messages.locale-changed": "&aLanguage changed successfully!",
+  "messages.locale-invalid": "&cInvalid language! Available: en_us, ru_ru"
+}

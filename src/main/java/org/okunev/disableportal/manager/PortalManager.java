@@ -19,27 +19,8 @@ public class PortalManager {
         config.addDefault("portals.nether.enabled", true);
         config.addDefault("portals.end.enabled", true);
 
-        // Add message defaults
-        config.addDefault("messages.no-permission", "&cYou don't have permission to do that!");
-        config.addDefault("messages.invalid-value", "&cInvalid value! Use true or false");
-        config.addDefault("messages.unknown-portal", "&cUnknown portal type! Use nether or end");
-        config.addDefault("messages.usage",
-                        "&a/disableportal nether <true/false> &7- Enable/disable Nether portals\n" +
-                        "&a/disableportal end <true/false> &7- Enable/disable End portals\n" +
-                        "&a/disableportal status &7- Current status");
-        config.addDefault("messages.status-title", "&6=== Current Settings ===");
-        config.addDefault("messages.nether-portals", "&eNether portals: ");
-        config.addDefault("messages.end-portals", "&eEnd portals: ");
-        config.addDefault("messages.enabled", "&aEnabled");
-        config.addDefault("messages.disabled", "&cDisabled");
-        config.addDefault("messages.nether-enabled", "&aNether portals are now available");
-        config.addDefault("messages.nether-disabled", "&aNether portals are now blocked");
-        config.addDefault("messages.end-enabled", "&aEnd portals are now available");
-        config.addDefault("messages.end-disabled", "&aEnd portals are now blocked");
-        config.addDefault("messages.nether-create-disabled", "&cCreating Nether portals is disabled!");
-        config.addDefault("messages.nether-use-disabled", "&cNether portals are disabled!");
-        config.addDefault("messages.end-activate-disabled", "&cActivating End portals is disabled!");
-        config.addDefault("messages.end-use-disabled", "&cEnd portals are disabled!");
+        config.addDefault("locale.default", "en_us");
+        config.addDefault("locale.auto-detect", true);
 
         config.options().copyDefaults(true);
         plugin.saveConfig();

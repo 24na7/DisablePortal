@@ -1,27 +1,6 @@
-messages:
-  no-permission: "&cYou don't have permission to do that!"
-  invalid-value: "&cInvalid value! Use true or false"
-  unknown-portal: "&cUnknown portal type! Use nether or end"
-  usage: |
-    &a/disableportal nether <true/false> &7- Enable/disable Nether portals
-    &a/disableportal end <true/false> &7- Enable/disable End portals
-    &a/disableportal status &7- Current status
-
-  status-title: "&6DisablePortal Status:"
-  nether-portals: "&eNether portals: "
-  end-portals: "&eEnd portals: "
-  enabled: "&aEnabled"
-  disabled: "&cDisabled"
-
-  nether-enabled: "&aNether portals are now available"
-  nether-disabled: "&aNether portals are now blocked"
-  end-enabled: "&aEnd portals are now available"
-  end-disabled: "&aEnd portals are now blocked"
-
-  nether-create-disabled: "&cCreating Nether portals is disabled!"
-  nether-use-disabled: "&cNether portals are disabled!"
-  end-activate-disabled: "&cActivating End portals is disabled!"
-  end-use-disabled: "&cEnd portals are disabled!"
+locale:
+  default: "en_us"
+  auto-detect: true
 
 portals:
   nether:
