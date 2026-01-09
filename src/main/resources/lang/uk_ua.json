@@ -1,0 +1,22 @@
+{
+  "messages.no-permission": "&cУ вас немає дозволу на цю дію!",
+  "messages.invalid-value": "&cНевірне значення! Використовуйте true або false",
+  "messages.unknown-portal": "&cНевідомий тип порталу! Використовуйте nether або end",
+  "messages.usage": "&a/disableportal nether <true/false> &7- Увімкнути/вимкнути портали Незеру\n&a/disableportal end <true/false> &7- Увімкнути/вимкнути портали Енду\n&a/disableportal status &7- Поточний статус\n&a/disableportal locale <en_us/ru_ru/uk_ua> &7- Змінити мову",
+  "messages.status-title": "&6=== Поточні налаштування ===",
+  "messages.nether-portals": "&eПортали Незеру: ",
+  "messages.end-portals": "&eПортали Енду: ",
+  "messages.enabled": "&aУвімкнено",
+  "messages.disabled": "&cВимкнено",
+  "messages.nether-enabled": "&aПортали Незеру тепер доступні",
+  "messages.nether-disabled": "&aПортали Незеру тепер заблоковані",
+  "messages.end-enabled": "&aПортали Енду тепер доступні",
+  "messages.end-disabled": "&aПортали Енду тепер заблоковані",
+  "messages.nether-create-disabled": "&cСтворення порталів Незеру вимкнено!",
+  "messages.nether-use-disabled": "&cПортали Незеру вимкнено!",
+  "messages.end-activate-disabled": "&cАктивація порталів Енду вимкнена!",
+  "messages.end-use-disabled": "&cПортали Енду вимкнено!",
+  "messages.locale-usage": "&cВикористання: /disableportal locale <en_us/ru_ru/uk_ua/be_by/de_de>",
+  "messages.locale-changed": "&aМову успішно змінено!",
+  "messages.locale-invalid": "&cНевірна мова! Доступні: en_us, ru_ru, uk_ua, be_by, de_de"
+}

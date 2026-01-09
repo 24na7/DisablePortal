@@ -1,0 +1,22 @@
+{
+  "messages.no-permission": "&cУ вас няма правоў для гэтага!",
+  "messages.invalid-value": "&cНяправільнае значэнне! Выкарыстоўвайце true ці false",
+  "messages.unknown-portal": "&cНевядомы тып партала! Выкарыстоўвайце nether ці end",
+  "messages.usage": "&a/disableportal nether <true/false> &7- Уключыць/выключыць парталы ў Ніжні свет\n&a/disableportal end <true/false> &7- Уключыць/выключыць парталы ў Энд\n&a/disableportal status &7- Бягучы статус\n&a/disableportal locale <en_us/ru_ru/be_by> &7- Змяніць мову",
+  "messages.status-title": "&6=== Бягучыя налады ===",
+  "messages.nether-portals": "&eПарталы ў Ніжні свет: ",
+  "messages.end-portals": "&eПарталы ў Энд: ",
+  "messages.enabled": "&aУключана",
+  "messages.disabled": "&cВыключана",
+  "messages.nether-enabled": "&aПарталы ў Ніжні свет цяпер даступны",
+  "messages.nether-disabled": "&aПарталы ў Ніжні свет цяпер заблакаваны",
+  "messages.end-enabled": "&aПарталы ў Энд цяпер даступны",
+  "messages.end-disabled": "&aПарталы ў Энд цяпер заблакаваны",
+  "messages.nether-create-disabled": "&cСтварэнне парталаў у Ніжні свет адключана!",
+  "messages.nether-use-disabled": "&cПарталы ў Ніжні свет адключаны!",
+  "messages.end-activate-disabled": "&cАктывацыя парталаў у Энд адключана!",
+  "messages.end-use-disabled": "&cПарталы ў Энд адключаны!",
+  "messages.locale-usage": "&cВыкарыстанне: /disableportal locale <en_us/ru_ru/uk_ua/be_by>",
+  "messages.locale-changed": "&aМова паспяхова зменена!",
+  "messages.locale-invalid": "&cНяправільная мова! Даступна: en_us, ru_ru, uk_ua, be_by, de_de"
+}

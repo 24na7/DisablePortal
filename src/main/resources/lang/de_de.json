@@ -1,0 +1,22 @@
+{
+  "messages.no-permission": "&cDu hast keine Berechtigung dafür!",
+  "messages.invalid-value": "&cUngültiger Wert! Verwende true oder false",
+  "messages.unknown-portal": "&cUnbekannter Portaltyp! Verwende nether oder end",
+  "messages.usage": "&a/disableportal nether <true/false> &7- Netherportale aktivieren/deaktivieren\n&a/disableportal end <true/false> &7- Endportale aktivieren/deaktivieren\n&a/disableportal status &7- Aktueller Status\n&a/disableportal locale <en_us/ru_ru/de_de> &7- Sprache ändern",
+  "messages.status-title": "&6=== Aktuelle Einstellungen ===",
+  "messages.nether-portals": "&eNetherportale: ",
+  "messages.end-portals": "&eEndportale: ",
+  "messages.enabled": "&aAktiviert",
+  "messages.disabled": "&cDeaktiviert",
+  "messages.nether-enabled": "&aNetherportale sind jetzt verfügbar",
+  "messages.nether-disabled": "&aNetherportale sind jetzt blockiert",
+  "messages.end-enabled": "&aEndportale sind jetzt verfügbar",
+  "messages.end-disabled": "&aEndportale sind jetzt blockiert",
+  "messages.nether-create-disabled": "&cErstellung von Netherportalen deaktiviert!",
+  "messages.nether-use-disabled": "&cNetherportale sind deaktiviert!",
+  "messages.end-activate-disabled": "&cAktivierung von Endportalen deaktiviert!",
+  "messages.end-use-disabled": "&cEndportale sind deaktiviert!",
+  "messages.locale-usage": "&cVerwendung: /disableportal locale <en_us/ru_ru/uk_ua/be_by/de_de>",
+  "messages.locale-changed": "&aSprache erfolgreich geändert!",
+  "messages.locale-invalid": "&cUngültige Sprache! Verfügbar: en_us, ru_ru, uk_ua, be_by, de_de"
+}

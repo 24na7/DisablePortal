@@ -16,7 +16,7 @@
   "messages.nether-use-disabled": "&cNether portals are disabled!",
   "messages.end-activate-disabled": "&cActivating End portals is disabled!",
   "messages.end-use-disabled": "&cEnd portals are disabled!",
-  "messages.locale-usage": "&cUsage: /disableportal locale <en_us/ru_ru>",
+  "messages.locale-usage": "&cUsage: /disableportal locale <en_us/ru_ru/uk_ua/be_by/de_de>",
   "messages.locale-changed": "&aLanguage changed successfully!",
-  "messages.locale-invalid": "&cInvalid language! Available: en_us, ru_ru"
+  "messages.locale-invalid": "&cInvalid language! Available: en_us, ru_ru, uk_ua, be_by, de_de"
 }

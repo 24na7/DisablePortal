@@ -16,7 +16,7 @@
   "messages.nether-use-disabled": "&cПорталы в Незер отключены!",
   "messages.end-activate-disabled": "&cАктивация порталов в Энд отключена!",
   "messages.end-use-disabled": "&cПорталы в Энд отключены!",
-  "messages.locale-usage": "&cИспользование: /disableportal locale <en_us/ru_ru>",
+  "messages.locale-usage": "&cИспользование: /disableportal locale <en_us/ru_ru/uk_ua/be_by/de_de>",
   "messages.locale-changed": "&aЯзык успешно изменен!",
-  "messages.locale-invalid": "&cНеверный язык! Доступно: en_us, ru_ru"
+  "messages.locale-invalid": "&cНеверный язык! Доступно: en_us, ru_ru, uk_ua, be_by, de_de"
 }
