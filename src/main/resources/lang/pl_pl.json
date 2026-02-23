@@ -1,0 +1,30 @@
+{
+  "messages": {
+    "usage": "&a/disableportal nether <true/false> &7- Włącz/wyłącz portale do Netheru\n&a/disableportal end <true/false> &7- Włącz/wyłącz portale do Endu\n&a/disableportal status &7- Aktualny status\n&a/disableportal locale <en_us/ru_ru/pl_pl> &7- Zmień język",
+    "no-permission": "&cNie masz uprawnień, aby to zrobić!",
+    "status-title": "&6=== Aktualne ustawienia ===",
+    "nether-portals": "&ePortale do Netheru: ",
+    "end-portals": "&ePortale do Endu: ",
+    "enabled": "&aWłączone",
+    "disabled": "&cWyłączone",
+    "nether-enabled": "&aPortale do Netheru zostały włączone!",
+    "nether-disabled": "&cPortale do Netheru zostały wyłączone!",
+    "end-enabled": "&aPortale do Endu zostały włączone!",
+    "end-disabled": "&cPortale do Endu zostały wyłączone!",
+    "locale-usage": "&cUżycie: /disableportal locale <en_us/ru_ru/uk_ua/be_by/fr_ca/pl_pl>",
+    "locale-changed": "&aJęzyk został zmieniony pomyślnie!",
+    "locale-invalid": "&cNieprawidlowy język! Dostępne: en_us, ru_ru, uk_ua, be_by, de_de, fr_ca, pl_pl",
+    "nether-create-disabled": "&cTworzenie portali do Netheru jest wyłączone!",
+    "end-activate-disabled": "&cAktywacja portali do Endu jest wyłączona!",
+    "nether-use-disabled": "&cPortale do Netheru są wyłączone!",
+    "end-use-disabled": "&cPortale do Endu są wyłączone!",
+    "unknown-portal": "&cNieznany typ portalu! Użyj nether lub end",
+    "invalid-value": "&cNieprawidlowa wartość! Użyj true lub false"
+  },
+  "admin": {
+    "update-available": "&b[DisablePortal] &aDostępna jest nowa wersja: &b{version} &a(twoja wersja: &c{your_version}&a)! &bPobierz: &6{modrinth_url}"
+  },
+  "console": {
+    "update-available": "[DisablePortal] Dostępna jest nowa wersja: {version}, twoja wersja: {your_version}! Pobierz najnowszą wersję: {modrinth_url}"
+  }
+}

@@ -1,22 +1,30 @@
 {
-  "messages.no-permission": "&cYou don't have permission to do that!",
-  "messages.invalid-value": "&cInvalid value! Use true or false",
-  "messages.unknown-portal": "&cUnknown portal type! Use nether or end",
-  "messages.usage": "&a/disableportal nether <true/false> &7- Enable/disable Nether portals\n&a/disableportal end <true/false> &7- Enable/disable End portals\n&a/disableportal status &7- Current status\n&a/disableportal locale <en_us/ru_ru> &7- Change language",
-  "messages.status-title": "&6=== Current Settings ===",
-  "messages.nether-portals": "&eNether portals: ",
-  "messages.end-portals": "&eEnd portals: ",
-  "messages.enabled": "&aEnabled",
-  "messages.disabled": "&cDisabled",
-  "messages.nether-enabled": "&aNether portals are now available",
-  "messages.nether-disabled": "&aNether portals are now blocked",
-  "messages.end-enabled": "&aEnd portals are now available",
-  "messages.end-disabled": "&aEnd portals are now blocked",
-  "messages.nether-create-disabled": "&cCreating Nether portals is disabled!",
-  "messages.nether-use-disabled": "&cNether portals are disabled!",
-  "messages.end-activate-disabled": "&cActivating End portals is disabled!",
-  "messages.end-use-disabled": "&cEnd portals are disabled!",
-  "messages.locale-usage": "&cUsage: /disableportal locale <en_us/ru_ru/uk_ua/be_by/de_de>",
-  "messages.locale-changed": "&aLanguage changed successfully!",
-  "messages.locale-invalid": "&cInvalid language! Available: en_us, ru_ru, uk_ua, be_by, de_de"
+  "messages": {
+    "usage": "&a/disableportal nether <true/false> &7- Enable/disable Nether portals\n&a/disableportal end <true/false> &7- Enable/disable End portals\n&a/disableportal status &7- Current status\n&a/disableportal locale <en_us/ru_ru> &7- Change language",
+    "no-permission": "&cYou don't have permission to do that!",
+    "status-title": "&6=== Current Settings ===",
+    "nether-portals": "&eNether portals: ",
+    "end-portals": "&eEnd portals: ",
+    "enabled": "&aEnabled",
+    "disabled": "&cDisabled",
+    "nether-enabled": "&aNether portals have been enabled!",
+    "nether-disabled": "&cNether portals have been disabled!",
+    "end-enabled": "&aEnd portals have been enabled!",
+    "end-disabled": "&cEnd portals have been disabled!",
+    "locale-usage": "&cUsage: /disableportal locale <en_us/ru_ru/uk_ua/be_by/fr_ca/pl_pl>",
+    "locale-changed": "&aLanguage changed successfully!",
+    "locale-invalid": "&cInvalid language! Available: en_us, ru_ru, uk_ua, be_by, de_de, fr_ca, pl_pl",
+    "nether-create-disabled": "&cCreating Nether portals is disabled!",
+    "end-activate-disabled": "&cActivating End portals is disabled!",
+    "nether-use-disabled": "&cNether portals are disabled!",
+    "end-use-disabled": "&cEnd portals are disabled!",
+    "unknown-portal": "&cUnknown portal type! Use nether or end.",
+    "invalid-value": "&cInvalid value! Use true or false"
+  },
+  "admin": {
+    "update-available": "&b[DisablePortal] &aNew version available: &b{version} &a(your version: &c{your_version}&a)! &bDownload: &6{modrinth_url}"
+  },
+  "console": {
+    "update-available": "[DisablePortal] New version available: {version}, your version: {your_version}! Download latest version: {modrinth_url}"
+  }
 }

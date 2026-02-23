@@ -1,7 +1,8 @@
 name: Disableportal
-version: '1.5'
+version: '1.6'
 main: org.okunev.disableportal.Disableportal
 api-version: '1.21'
+folia-supported: true
 author: 24na7
 description: This plugin disables the ability to activate Nether or End portals. You can enable or disable this blocking feature and activate the portal.
 commands:

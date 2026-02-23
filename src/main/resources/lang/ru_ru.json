@@ -1,22 +1,30 @@
 {
-  "messages.no-permission": "&cУ вас нет прав для этого!",
-  "messages.invalid-value": "&cНеверное значение! Используйте true или false",
-  "messages.unknown-portal": "&cНеизвестный тип портала! Используйте nether или end",
-  "messages.usage": "&a/disableportal nether <true/false> &7- Включить/выключить порталы в Незер\n&a/disableportal end <true/false> &7- Включить/выключить порталы в Энд\n&a/disableportal status &7- Текущий статус\n&a/disableportal locale <en_us/ru_ru> &7- Изменить язык",
-  "messages.status-title": "&6=== Текущие настройки ===",
-  "messages.nether-portals": "&eПорталы в Незер: ",
-  "messages.end-portals": "&eПорталы в Энд: ",
-  "messages.enabled": "&aВключено",
-  "messages.disabled": "&cВыключено",
-  "messages.nether-enabled": "&aПорталы в Незер теперь доступны",
-  "messages.nether-disabled": "&aПорталы в Незер теперь заблокированы",
-  "messages.end-enabled": "&aПорталы в Энд теперь доступны",
-  "messages.end-disabled": "&aПорталы в Энд теперь заблокированы",
-  "messages.nether-create-disabled": "&cСоздание порталов в Незер отключено!",
-  "messages.nether-use-disabled": "&cПорталы в Незер отключены!",
-  "messages.end-activate-disabled": "&cАктивация порталов в Энд отключена!",
-  "messages.end-use-disabled": "&cПорталы в Энд отключены!",
-  "messages.locale-usage": "&cИспользование: /disableportal locale <en_us/ru_ru/uk_ua/be_by/de_de>",
-  "messages.locale-changed": "&aЯзык успешно изменен!",
-  "messages.locale-invalid": "&cНеверный язык! Доступно: en_us, ru_ru, uk_ua, be_by, de_de"
+  "messages": {
+    "usage": "&a/disableportal nether <true/false> &7- Включить/выключить порталы в Незер\n&a/disableportal end <true/false> &7- Включить/выключить порталы в Энд\n&a/disableportal status &7- Текущий статус\n&a/disableportal locale <en_us/ru_ru> &7- Изменить язык",
+    "no-permission": "&cУ вас нет прав для этого!",
+    "status-title": "&6=== Текущие настройки ===",
+    "nether-portals": "&eПорталы в незер: ",
+    "end-portals": "&eПорталы в энд: ",
+    "enabled": "&aВключено",
+    "disabled": "&cВыключено",
+    "nether-enabled": "&aПорталы в незер теперь доступны!",
+    "nether-disabled": "&cПорталы в незер теперь заблокированы!",
+    "end-enabled": "&aПорталы в энд теперь доступны!",
+    "end-disabled": "&cПорталы в энд теперь заблокированы!",
+    "locale-usage": "&cИспользование: /disableportal locale <en_us/ru_ru/uk_ua/be_by/fr_ca/pl_pl>",
+    "locale-changed": "&aЯзык успешно изменен!",
+    "locale-invalid": "&cНеверный язык! Доступны: en_us, ru_ru, uk_ua, be_by, de_de, fr_ca, pl_pl",
+    "nether-create-disabled": "&cАктивация порталов в незер отключены!",
+    "end-activate-disabled": "&cАктивация порталов в энд отключены!",
+    "nether-use-disabled": "&cПорталы в незер отключены!",
+    "end-use-disabled": "&cПорталы в энд отключены!",
+    "unknown-portal": "&cНеизвестный тип портала! Используйте nether или end",
+    "invalid-value": "&cНеверное значение! Используйте true или false"
+  },
+  "admin": {
+    "update-available": "&b[DisablePortal] &aДоступна новая версия: &b{version} &a(ваша версия: &c{your_version}&a)! &bСкачать: &6{modrinth_url}"
+  },
+  "console": {
+    "update-available": "[DisablePortal] Доступна новая версия: {version}, ваша версия: {your_version}! Скачайте последнюю версию: {modrinth_url}"
+  }
 }
